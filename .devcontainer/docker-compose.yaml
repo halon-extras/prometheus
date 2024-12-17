@@ -1,0 +1,19 @@
+services:
+  halon-smtpd:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+      args:
+        HALON_REPO_USER: ${HALON_REPO_USER}
+        HALON_REPO_PASS: ${HALON_REPO_PASS}
+    ports:
+      - "9100:9100"
+    volumes:
+      - ../:/prometheus
+      - ./smtpd/dist:/etc/halon
+  prometheus:
+    image: prom/prometheus:v2.44.0
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml

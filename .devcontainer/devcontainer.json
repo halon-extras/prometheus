@@ -1,0 +1,19 @@
+{
+	"name": "prometheus",
+	"dockerComposeFile": [
+		"docker-compose.yaml"
+	],
+	"workspaceFolder": "/prometheus",
+	"service": "halon-smtpd",
+	"overrideCommand": false,
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Halon.vscode-halon",
+				"Halon.hsl-linter",
+				"Halon.hsl-debug",
+				"ms-vscode.cpptools"
+			]
+		}
+	}
+}

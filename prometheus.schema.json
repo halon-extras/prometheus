@@ -3,7 +3,6 @@
 	"description": "Prometheus schema",
 	"type": "object",
 	"additionalProperties": false,
-	"required": [],
 	"properties": {
 		"address": {
 			"type": "string",
